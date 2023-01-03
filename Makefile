@@ -39,7 +39,7 @@ sim-verilog: $(SIM_TOP_V)
 # generate difftest files for non-chisel design.
 difftest_verilog:
 ifeq ($(USE_DIFFTEST_MAIN), 1)
-	mill chiselModule.runMain difftest.DifftestMain -td $(BUILD_DIR)
+	mill chiselModule.runMain difftest.DifftestMain --full-stacktrace -td $(BUILD_DIR)
 endif
 
 # co-simulation with DRAMsim3
